@@ -1,1 +1,29 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>فطومتي 👑</title><style>
+body{margin:0;font-family:sans-serif;background:#fff0f3;text-align:center}
+#lock{position:fixed;inset:0;background:linear-gradient(#ff8fa3,#ff2e63,#1a0a0f);display:flex;align-items:center;justify-content:center;z-index:99}
+.box{background:#fff;padding:35px 22px;border-radius:30px;width:90%;max-width:380px}
+input{width:100%;padding:18px;border-radius:15px;border:3px solid #ffd1d9;font-size:22px;text-align:center;margin:12px 0}
+button{width:100%;padding:18px;background:#ff2e63;color:#fff;border:0;border-radius:15px;font-size:20px;font-weight:900}
+.hero{padding:80px 20px 80px;background:linear-gradient(#ff8fa3,#fff0f3)}
+h1{font-size:60px;color:#7a0a25;margin:0}.card{max-width:600px;margin:-40px auto 0;background:#fff;padding:28px 20px;border-radius:28px;box-shadow:0 15px 50px rgba(0,0,0,.15);line-height:2.3;font-size:19px;white-space:pre-line;text-align:right}
+.imgbox{max-width:600px;margin:25px auto}.imgbox img{width:100%;height:580px;object-fit:cover;border-radius:35px;box-shadow:0 15px 50px rgba(0,0,0,.2);border:10px solid #fff}
+.music{max-width:600px;margin:20px auto;background:#fff;border:3px dashed #ff8fa3;border-radius:20px;padding:18px}audio{width:100%}
+.time{display:flex;gap:10px;max-width:600px;margin:20px auto;background:#1a0a0f;color:#fff;border-radius:20px;padding:18px}
+.time div{flex:1;background:rgba(255,255,255,.1);border-radius:15px;padding:10px}.time b{font-size:28px;display:block}
+.footer{background:#000;color:#fff;padding:50px 20px;margin-top:40px;border-radius:40px 40px 0 0}</style></head><body>
+<div id="lock"><div class="box"><div style="font-size:60px">🔐💖</div><h2>مفاجأة فطومتي</h2><p>الباسورد: 2442025</p>
+<input id="p" type="password" placeholder="الباسورد"><button onclick="go()">افتحي يا ملكة قلبي 👑</button><p id="er" style="display:none;color:red">غلط جربي 2442025</p></div></div> <div id="main" style="display:none"><div class="hero"><h1>فطومتي<br>حبيبة قلبي 👑</h1></div>
+<div class="card">عايز اقولك انك من يوم ما دخلتي حياتي وانتي غيرتي كل حاجة فيها والله اتغيرت فعلا بسببك
 
+انتي مش مجرد حبيبتي، انتي حنينه عليا وطيبة وقلبك ابيض وجميله اوي والله 
+بحب كل تفصيلة فيكي، بحب كلامك وهزارك وحتى سكوتك بحبوا والله 🫠🫶🏻
+
+انتي غالية عندي اوي، انا بجد بعتبرك حياتيي، حته مني حرفيا
+ووعد مني هفضل احبك واخاف عليكي واشيلك جوه قلبي وعيني طول العمر.
+ربنا يخليكي ليا وميحرمنيش منك ابدا يبنوتي
+بحبك اوي🫶🏻♥🫂❣️</div>
+<div class="time"><div><b id="d">0</b>يوم</div><div><b id="h">0</b>ساعة</div><div><b id="m">0</b>دقيقة</div><div><b id="s">0</b>ثانية</div></div>
+<div class="imgbox"><img src="1.jpg"></div>
+<div class="music"><p style="color:#ff2e63;font-weight:900">🎵 اغنيتنا 🎵</p><audio id="au" controls loop><source src="song.mp3" type="audio/mpeg"></audio></div>
+<div class="footer"><h2>محمد بيحب فطومة للأبد ♾️</h2><p>ربنا يخليكي ليا يا بنوتي<br>❤️🫂❣️👑</p></div></div>
+<script>function go(){if(document.getElementById('p').value=='2442025'){document.getElementById('lock').style.display='none';document.getElementById('main').style.display='block';var a=document.getElementById('au');a.volume=.8;a.play().catch(()=>{});}else{document.getElementById('er').style.display='block';}}let s=new Date('2025-04-24');setInterval(()=>{let d=new Date()-s;document.getElementById('d').innerText=Math.floor(d/86400000);document.getElementById('h').innerText=Math.floor(d%86400000/3600000);document.getElementById('m').innerText=Math.floor(d%3600000/60000);document.getElementById('s').innerText=Math.floor(d%60000/1000)},1000);</script></body></html>
