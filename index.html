@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فاطمة ❤️</title>
+<style>
+body{margin:0;font-family:sans-serif;background:#111;color:#fff;text-align:center}
+.lock{position:fixed;inset:0;background:#111;display:flex;align-items:center;justify-content:center;z-index:99;transition:.7s}
+.box{background:#222;padding:30px;border-radius:20px;width:90%;max-width:340px}
+input{width:100%;padding:14px;border-radius:30px;border:0;background:#333;color:#fff;text-align:center;font-size:18px;margin:12px 0}
+button{width:100%;padding:13px;border-radius:30px;border:0;background:#ff2e7e;color:#fff;font-weight:900;font-size:18px}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}
+h1{font-size:50px;color:#ff8fab}
+.msg{max-width:600px;margin:20px auto;background:#222;padding:25px;border-radius:20px;line-height:2}
+</style>
+</head>
+<body>
+<div class="lock" id="lock">
+<div class="box">
+<div style="font-size:50px">🔒❤️</div>
+<h3>صفحة سرية لفاطمة فقط</h3>
+<input id="p" type="password" placeholder="الباسورد: fatma">
+<button onclick="unlock()">افتحي يا فاطمة ❤️</button>
+<p id="err" style="color:#ff4d6d;display:none;margin-top:10px">غلط حاولي fatma</p>
+</div>
+</div>
+<div class="hero">
+<h1>فاطمة ❤️</h1>
+<p style="color:#ff8fab;font-size:24px">انتي كل حياتي</p>
+<div class="msg">
+يا فاطمة...<br><br>
+من اول يوم شفتك وانتي اغلى حد في حياتي<br>
+ضحكتك بتنور يومي<br><br>
+عملتلك الصفحة دي مخصوص عشانك<br><br>
+بحبك وهفضل احبك لاخر نفس فيا ❤️<br><br>
+<span style="color:#ff8fab">- محمد</span>
+</div>
+</div>
+<script>
+function unlock(){
+ var v=document.getElementById('p').value.toLowerCase().trim();
+ if(v==='fatma'||v==='فاطمة'||v==='فاطمه'){
+  document.getElementById('lock').style.opacity='0';
+  setTimeout(function(){document.getElementById('lock').style.display='none'},700);
+ }else{document.getElementById('err').style.display='block'}
+}
+</script>
+</body>
+</html>
