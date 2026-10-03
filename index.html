@@ -3,43 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>فطومتي</title>
+<title>إلى فطومتي ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#ff8fa3;min-height:100vh;font-family:sans-serif}
-#lock{position:fixed;inset:0;background:#ff8fa3;display:flex;align-items:center;justify-content:center;z-index:999;padding:15px}
-.box{background:white;width:100%;max-width:400px;padding:30px;border-radius:30px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.15)}
-.box input{width:100%;padding:18px;border:2px solid #ffb6c1;border-radius:15px;font-size:22px;text-align:center;margin:15px 0;outline:none}
-.box button{width:100%;padding:18px;background:#ff4d6d;color:white;border:none;border-radius:15px;font-size:20px;font-weight:bold;cursor:pointer}
-#content{display:none;background:white;min-height:100vh;width:100%;padding:25px 18px;text-align:center}
-#content img{width:100%;border-radius:20px;margin:15px 0}
-.text{font-size:21px;line-height:2.2;white-space:pre-line;color:#333}
-.counter{display:flex;justify-content:space-between;gap:8px;margin:20px 0}
-.counter div{flex:1;background:#fff0f3;padding:12px 5px;border-radius:15px;border:2px solid #ffb6c1}
-.counter b{display:block;font-size:26px;color:#ff2e63}
-audio{width:100%;margin-top:15px}
-.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
-.heart{position:absolute;animation:fall 4s linear infinite;font-size:22px}
-@keyframes fall{0%{transform:translateY(-10vh)}100%{transform:translateY(110vh)}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Tajawal',sans-serif;background:#0f0f0f;overflow-x:hidden;color:#fff}
+:root{--pink:#ff2e63;--light:#fff0f3}
+#lock{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 30%, #ff8fa3 0%, #ff2e63 50%, #1a0a0f 100%);padding:20px}
+.glass{background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);border-radius:35px;padding:40px 28px;width:100%;max-width:380px;text-align:center;box-shadow:0 20px 80px rgba(0,0,0,0.3);animation:pop 0.8s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pop{0%{transform:scale(0.7)}100%{transform:scale(1)}}
+.glass h2{color:#1a0a0f;font-size:28px;font-weight:900}
+.glass p{color:#666;margin:10px 0 0;font-size:15px}
+#pass{width:100%;padding:20px;border:3px solid #ffd1d9;border-radius:18px;font-size:24px;text-align:center;outline:none;margin:20px 0;transition:0.3s}
+#pass:focus{border-color:var(--pink);box-shadow:0 0 0 4px rgba(255,46,99,0.15)}
+.btn{width:100%;padding:19px;background:linear-gradient(135deg,#ff2e63,#ff8fa3);color:#fff;border:0;border-radius:18px;font-size:20px;font-weight:900;cursor:pointer;box-shadow:0 10px 30px rgba(255,46,99,0.4);transition:0.2s}
+.btn:active{transform:scale(0.97)}
+#main{display:none;min-height:100vh;background:#fff;color:#222;position:relative}
+.hero{min-height:85vh;background:linear-gradient(180deg,#ff8fa3 0%,#ffffff 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 18px 30px;text-align:center;position:relative;overflow:hidden}
+.hero h1{font-family:'Amiri',serif;font-size:52px;color:var(--pink);line-height:1.1;margin-bottom:10px;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero .sub{font-size:18px;color:#ff6b8a;font-weight:700;letter-spacing:2px}
+.letter-sec{padding:35px 18px;max-width:600px;margin:0 auto}
+.card{background:#fff;border-radius:28px;padding:28px 22px;box-shadow:0 15px 50px rgba(255,46,99,0.12);border:1px solid #ffe4e9;position:relative;margin-top:-40px}
+.card::before{content:'💌';position:absolute;top:-18px;right:22px;font-size:32px}
+.type-text{font-size:22px;line-height:2.2;white-space:pre-line;font-weight:400;color:#222;text-align:right}
+.counter-wrap{margin:35px 0;background:linear-gradient(135deg,#1a0a0f,#ff2e63);border-radius:28px;padding:26px 16px;color:#fff;text-align:center;position:relative;overflow:hidden}
+.counter-wrap::after{content:'❤️';position:absolute;font-size:120px;opacity:0.08;right:-20px;top:-20px}
+.counter-wrap h3{font-size:22px;margin-bottom:18px}
+.counter{display:flex;gap:8px}
+.counter div{flex:1;background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);border-radius:16px;padding:14px 4px;border:1px solid rgba(255,255,255,0.15)}
+.counter b{font-size:30px;display:block;font-weight:900}
+.counter span{font-size:12px;opacity:0.8}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.gallery img{width:100%;height:220px;object-fit:cover;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,0.12);transition:0.3s}
+.gallery img:nth-child(1){grid-column:span 2;height:380px}
+.gallery img:hover{transform:scale(1.02)}
+.music{margin:30px 0;background:#fff0f3;border-radius:22px;padding:18px;border:2px dashed #ffb6c1}
+.music audio{width:100%;margin-top:10px}
+.why{margin:40px 0}
+.why h3{font-size:26px;color:var(--pink);margin-bottom:15px;text-align:center}
+.chip{display:inline-block;background:#fff0f3;border:2px solid #ffb6c1;padding:10px 16px;border-radius:50px;margin:6px 4px;font-weight:700;color:#d90429}
+.footer{text-align:center;padding:50px 20px;background:#1a0a0f;color:#fff;margin-top:40px;border-radius:35px 35px 0 0}
+.footer h2{font-family:'Amiri',serif;font-size:36px;color:#ff8fa3}
+.hearts{position:fixed;inset:0;pointer-events:none;z-index:2}
+.heart{position:absolute;animation:fall linear infinite}
+@keyframes fall{0%{transform:translateY(-10vh) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(360deg);opacity:0}}
 </style>
 </head>
 <body>
 <div class="hearts" id="hearts"></div>
 
 <div id="lock">
-  <div class="box">
-    <h2 style="margin-bottom:10px">🔒 لفطومتي بس</h2>
-    <p style="color:#888">اكتبي 2442025</p>
+  <div class="glass">
+    <div style="font-size:60px">🔐</div>
+    <h2>دي ل فطومتي بس</h2>
+    <p>التاريخ اللي بقينا فيه لبعض<br>يوم / شهر / سنة</p>
     <input id="pass" type="text" inputmode="numeric" placeholder="2442025">
-    <button type="button" onclick="openLove()">افتحي يا روحي ❤️</button>
-    <p id="err" style="color:red;margin-top:10px;display:none">اكتبي 2442025 بالظبط</p>
+    <button class="btn" onclick="unlock()">افتحي يا روح قلبي ❤️</button>
+    <p id="err" style="display:none;color:#ff2e63;margin-top:12px;font-weight:700">التاريخ غلط يا فطومتي 🥺 2442025</p>
   </div>
 </div>
 
-<div id="content">
-  <h1 style="color:#ff2e63;font-size:34px">فطومتي ❤️</h1>
-  
-  <div class="text">عايز اقولك انك من يوم ما دخلتي حياتي وانتي غيرتي كل حاجة فيها والله اتغيرت فعلا بسببك
+<div id="main">
+  <div class="hero">
+    <h1>فطومتي</h1>
+    <div class="sub">MY WHOLE WORLD ❤️</div>
+    <div style="margin-top:25px;font-size:32px;animation:float 2s infinite">👇🏻</div>
+  </div>
+
+  <div class="letter-sec">
+    <div class="card">
+      <div class="type-text" id="type">عايز اقولك انك من يوم ما دخلتي حياتي وانتي غيرتي كل حاجة فيها والله اتغيرت فعلا بسببك
 
 انتي مش مجرد حبيبتي، انتي حنينه عليا وطيبة وقلبك ابيض وجميله اوي والله 
 بحب كل تفصيلة فيكي، بحب كلامك وهزارك وحتى سكوتك بحبوا والله 🫠🫶🏻
@@ -48,34 +82,55 @@ audio{width:100%;margin-top:15px}
 ووعد مني هفضل احبك واخاف عليكي واشيلك جوه قلبي وعيني طول العمر.
 ربنا يخليكي ليا وميحرمنيش منك ابدا يبنوتي
 بحبك اوي🫶🏻♥🫂❣️</div>
+    </div>
 
-  <h2 style="color:#ff2e63;margin-top:30px">بقالنا قد ايه سوا ⏰</h2>
-  <div class="counter">
-    <div><b id="d">0</b><span>يوم</span></div>
-    <div><b id="h">0</b><span>ساعة</span></div>
-    <div><b id="m">0</b><span>دقيقة</span></div>
-    <div><b id="s">0</b><span>ثانية</span></div>
+    <div class="counter-wrap">
+      <h3>بقالنا قد ايه بنحب بعض ⏳❤️</h3>
+      <div class="counter">
+        <div><b id="d">0</b><span>يوم</span></div>
+        <div><b id="h">0</b><span>ساعة</span></div>
+        <div><b id="m">0</b><span>دقيقة</span></div>
+        <div><b id="s">0</b><span>ثانية</span></div>
+      </div>
+      <p style="margin-top:15px;opacity:0.8;font-size:14px">من 24 أبريل 2025 - اليوم اللي حياتي بدأت فيه</p>
+    </div>
+
+    <div class="gallery">
+      <img src="Snapchat-1133697481.jpg" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800'">
+      <img src="IMG_٢٢٣٧_٦_٢٠٢٦_٦١١.jpg" onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600'">
+      <img src="IMG_٠٩٤٩٥٤_٢٠٢٦_٣١٢~2.png" onerror="this.src='https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600'">
+    </div>
+
+    <div class="why">
+      <h3>بحبك ليه؟</h3>
+      <div style="text-align:center">
+        <span class="chip">💖 طيبتك</span><span class="chip">🥺 حنيتك</span><span class="chip">😍 جمالك</span><span class="chip">🫶🏻 قلبك الأبيض</span><span class="chip">✨ ضحكتك</span><span class="chip">🫠 هزارك</span><span class="chip">💬 كلامك</span><span class="chip">🤍 سكوتك حتى</span>
+      </div>
+    </div>
+
+    <div class="music">
+      <p style="font-weight:900;color:#ff2e63;text-align:center;font-size:19px">🎵 اغنيتنا اللي بتفكرني بيكي 🎵</p>
+      <p style="text-align:center;color:#888;font-size:13px">دوسي Play وخليكي جوه حضن الكلام</p>
+      <audio id="aud" controls loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/06/07/audio_b9bd4170e8.mp3" type="audio/mpeg">
+      </audio>
+    </div>
   </div>
-  <p>من 24-4-2025 ❤️</p>
 
-  <img src="Snapchat-1133697481.jpg" onerror="this.style.display='none'">
-  <img src="IMG_٢٢٣٧_٦_٢٠٢٦_٦١١.jpg" onerror="this.style.display='none'">
-  <img src="IMG_٠٩٤٩٥٤_٢٠٢٦_٣١٢~2.png" onerror="this.style.display='none'">
-
-  <div style="background:#fff0f3;padding:20px;border-radius:20px;margin-top:25px">
-    <p style="font-size:20px">🎵 اغنيتنا - دوسي Play 🎵</p>
-    <audio id="audio" controls autoplay loop>
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    </audio>
+  <div class="footer">
+    <h2>محمد بيحب فطومة للأبد</h2>
+    <p style="margin-top:12px;opacity:0.7;line-height:1.8">وعد ما يخلصش<br>مهما حصل هتفضلي حته مني</p>
+    <div style="margin-top:20px;font-size:28px">❤️🫂❣️</div>
+    <p style="margin-top:25px;font-size:12px;opacity:0.4">Made with all my heart - 2026</p>
   </div>
-
-  <h2 style="margin:35px 0;color:#ff2e63">محمد بيحبك للأبد ❤️</h2>
-  <br><br>
 </div>
 
 <script>
-// قلوب طايرة
-for(let i=0;i<25;i++){
- let e=document.createElement('div');
- e.className='heart'; e.innerHTML='❤️';
- e.style.left=Math.random()*100+'%
+for(let i=0;i<30;i++){let e=document.createElement('div');e.className='heart';e.innerHTML=['❤️','💖','💕','🫶🏻'][Math.floor(Math.random()*4)];e.style.left=Math.random()*100+'%';e.style.animationDuration=(3+Math.random()*4)+'s';e.style.animationDelay=Math.random()*5+'s';e.style.fontSize=(14+Math.random()*20)+'px';document.getElementById('hearts').appendChild(e);}
+let start=new Date('2025-04-24T00:00:00');setInterval(()=>{let diff=new Date()-start;document.getElementById('d').innerText=Math.floor(diff/86400000);document.getElementById('h').innerText=Math.floor(diff%86400000/3600000);document.getElementById('m').innerText=Math.floor(diff%3600000/60000);document.getElementById('s').innerText=Math.floor(diff%60000/1000);},1000);
+function unlock(){let v=document.getElementById('pass').value.trim();if(v==='2442025'||v==='٢٤٤٢٠٢٥'){document.getElementById('lock').style.transition='0.8s';document.getElementById('lock').style.transform='scale(1.5)';document.getElementById('lock').style.opacity='0';setTimeout(()=>{document.getElementById('lock').style.display='none';document.getElementById('main').style.display='block';window.scrollTo(0,0);document.getElementById('aud').play().catch(()=>{});confetti()},600);}else{document.getElementById('err').style.display='block';document.getElementById('pass').style.borderColor='#ff2e63';document.getElementById('pass').animate([{transform:'translateX(0)'},{transform:'translateX(-8px)'},{transform:'translateX(8px)'},{transform:'translateX(0)'}],{duration:300})}}
+function confetti(){for(let i=0;i<80;i++){setTimeout(()=>{let d=document.createElement('div');d.style.position='fixed';d.style.left=Math.random()*100+'vw';d.style.top='-10px';d.style.fontSize='24px';d.innerHTML='❤️';d.style.zIndex=9999;d.style.pointerEvents='none';d.style.animation=`fall ${2+Math.random()*3}s linear forwards`;document.body.appendChild(d);setTimeout(()=>d.remove(),4000)},i*30)}}
+document.getElementById('pass').addEventListener('keydown',e=>{if(e.key==='Enter')unlock()})
+</script>
+</body>
+      </html>
