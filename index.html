@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -6,40 +5,93 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>فطومتي ❤️</title>
 <style>
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ff9a9e,#fecfef,#ffdde1);font-family:sans-serif;padding:20px}
-.card{background:white;max-width:520px;width:100%;border-radius:30px;padding:35px 25px;box-shadow:0 20px 60px rgba(0,0,0,0.15);text-align:center}
-h1{color:#ff4d6d;font-size:32px}
-p{color:#333;font-size:19px;line-height:1.9;white-space:pre-line}
-.heart{font-size:50px;animation:beat 1s infinite alternate}
-@keyframes beat{to{transform:scale(1.2)}}
-#lock-screen{position:fixed;inset:0;background:linear-gradient(135deg,#ff9a9e,#fecfef);display:flex;align-items:center;justify-content:center;z-index:999}
-.lock-box{background:white;padding:30px;border-radius:20px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,0.2);width:90%;max-width:350px}
-input{width:90%;padding:12px;border-radius:25px;border:2px solid #ff9a9e;text-align:center;font-size:18px;margin:15px 0}
-button{background:#ff4d6d;color:white;border:none;padding:12px 25px;border-radius:25px;font-size:18px;cursor:pointer;width:100%}
-img{width:100%;border-radius:20px;margin:15px 0;max-height:400px;object-fit:cover}
-.music{margin-top:15px;background:#fff0f3;padding:12px;border-radius:15px}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ffafbd,#ffc3a0);font-family:sans-serif;padding:20px;box-sizing:border-box}
+#lock{position:fixed;inset:0;background:linear-gradient(135deg,#ff6a88,#ff99ac);display:flex;align-items:center;justify-content:center;z-index:9999}
+.box{background:#fff;padding:30px;border-radius:20px;text-align:center;width:90%;max-width:340px;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+.box input{width:100%;padding:14px;border-radius:12px;border:2px solid #ffafbd;margin:15px 0;text-align:center;font-size:22px;box-sizing:border-box}
+.box button{background:#ff6a88;color:#fff;border:none;padding:14px;border-radius:12px;width:100%;font-size:18px;cursor:pointer}
+.card{background:#fff;padding:25px;border-radius:20px;max-width:430px;width:100%;text-align:center;display:none;line-height:1.8;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+.card img{width:100%;border-radius:15px;margin:12px 0;display:block}
+.text{font-size:17px;color:#333;white-space:pre-line;text-align:right}
+.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+.counter div{background:#fff0f3;padding:10px;border-radius:12px;border:1px solid #ffafbd}
+.counter span{display:block;font-size:22px;font-weight:bold;color:#ff6a88}
+.counter label{font-size:12px;color:#666}
 </style>
 </head>
 <body>
 
-<div id="lock-screen">
-  <div class="lock-box">
-    <div style="font-size:50px">🔒</div>
-    <h2 style="color:#ff4d6d">ده سر بيني وبينك يا فطومتي</h2>
-    <p style="font-size:14px;color:#666">اكتبي تاريخنا عشان تفتحي المفاجأة</p>
-    <input type="password" id="passInput" placeholder="تاريخنا..">
-    <button onclick="checkPass()">افتحي يا فطومتي ❤️</button>
-    <p id="error" style="color:red;font-size:13px;display:none;margin-top:10px">التاريخ غلط يا فطومتي جربي تاني 🥺</p>
+<div id="lock">
+  <div class="box">
+    <h2>🔒 لفطومتي بس</h2>
+    <p>اكتبي تاريخنا</p>
+    <input id="pass" type="password" placeholder="2442025">
+    <button onclick="openLove()">افتحي يا قلبي ❤️</button>
+    <p id="err" style="color:red;display:none;margin-top:10px">غلط يا فطومة .. جربي 2442025</p>
   </div>
 </div>
 
-<div class="card" id="main-content" style="display:none">
-<div class="heart">❤️</div>
-<h1>بصي ي فطومتي</h1>
+<div class="card" id="content">
+  <h1>بصي يا فطومتي ❤️</h1>
+  
+  <div class="text">عايز اقولك انك من يوم ما دخلتي حياتي وانتي غيرتي كل حاجة فيها والله اتغيرت فعلا بسببك
 
-<!-- الصورة هتظهر هنا لوحدها لما ترفعها -->
-<img id="fatomImg" src="fatom.jpg" onerror="this.style.display='none'">
-
-<p>عايز اقولك انك من يوم ما دخلتي حياتي وانتي غيرتي كل حاجة فيها والله اتغيرت فعلا بسببك
 انتي مش مجرد حبيبتي، انتي حنينه عليا وطيبة وقلبك ابيض وجميله اوي والله 
-بحب كل تفصيلة فيكي، بحب ك
+بحب كل تفصيلة فيكي، بحب كلامك وهزارك وحتى سكوتك بحبوا والله 🫠🫶🏻
+
+انتي غالية عندي اوي، انا بجد بعتبرك حياتيي، حته مني حرفيا
+ووعد مني هفضل احبك واخاف عليكي واشيلك جوه قلبي وعيني طول العمر.
+ربنا يخليكي ليا وميحرمنيش منك ابدا يبنوتي
+بحبك اوي🫶🏻♥🫂❣️</div>
+
+  <h3 style="margin-top:20px">بقالنا قد ايه سوا؟ ⏰</h3>
+  <div class="counter">
+    <div><span id="days">0</span><label>يوم</label></div>
+    <div><span id="hours">0</span><label>ساعة</label></div>
+    <div><span id="mins">0</span><label>دقيقة</label></div>
+    <div><span id="secs">0</span><label>ثانية</label></div>
+  </div>
+  <p style="font-size:13px;color:#888">من يوم 24-4-2025</p>
+
+  <img src="Snapchat-1133697481.jpg">
+  <img src="IMG_٢٢٣٧_٦_٢٠٢٦_٦١١.jpg">
+  <img src="IMG_٠٩٤٩٥٤_٢٠٢٦_٣١٢~2.png">
+
+  <p>🎵 من زمان نفسي اغنيلك - كايروكي 🎵</p>
+  <audio id="loveSong" loop controls autoplay style="width:100%">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+  <p style="font-size:11px;color:#aaa">لو عايز اغنية كايروكي الاصلية ابعتلي ملف الmp3 وانا احطهولك</p>
+
+  <p style="margin-top:15px"><b>بحبك للأبد - محمد ❤️</b></p>
+</div>
+
+<script>
+const startDate = new Date('2025-04-24T00:00:00');
+function updateCounter(){
+  const now = new Date();
+  let diff = now - startDate;
+  const days = Math.floor(diff / (1000*60*60*24));
+  const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+  const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+  const secs = Math.floor((diff % (1000*60)) / 1000);
+  document.getElementById('days').innerText = days;
+  document.getElementById('hours').innerText = hours;
+  document.getElementById('mins').innerText = mins;
+  document.getElementById('secs').innerText = secs;
+}
+setInterval(updateCounter,1000);
+updateCounter();
+
+function openLove(){
+  if(document.getElementById('pass').value==='2442025'){
+    document.getElementById('lock').style.display='none';
+    document.getElementById('content').style.display='block';
+    document.getElementById('loveSong').play();
+  }else{
+    document.getElementById('err').style.display='block';
+  }
+}
+</script>
+</body>
+</html>
